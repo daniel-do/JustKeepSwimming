@@ -5,7 +5,19 @@ let config = {
     scale: {
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
-    scene: [ Menu, Credits, Play, GameOver ]
+    scene: [ Menu, Credits, Play, GameOver ],
+    physics: {
+        default: 'arcade',
+        arcade: {
+            debug: false,
+        }
+    },
 }
 
-const game = new Phaser.Game(config)
+let game = new Phaser.Game(config)
+
+let score = 0
+let gameover = false
+
+// reserve keyboard vars
+let keyC, keySPACE, key1, key2, key3, key4, key5, key6, key7, key8, key9
