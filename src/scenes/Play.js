@@ -4,7 +4,7 @@ class Play extends Phaser.Scene {
     }
 
     preload() {
-        this.load.spritesheet('player', './assets/images/triange.jpg')
+        this.load.image('player', './assets/images/triangle.png')
         this.load.audio('lane1', './assets/audio/piano-c4.mp3')
         this.load.audio('lane2', './assets/audio/piano-d4.mp3')
         this.load.audio('lane3', './assets/audio/piano-e4.mp3')
@@ -29,7 +29,10 @@ class Play extends Phaser.Scene {
         this.lane9 = this.sound.add('lane9')
 
         // Add player
-        this.player = new Player(this, game.config.width / 10, game.config.height / 2, 'player')
+        //this.player = new Player(this, game.config.width / 10, game.config.height / 2, 'player')
+        this.player = this.physics.add.sprite(game.config.width / 8, game.config.height / 2, 'player').setScale(0.1)
+        this.player.setCollideWorldBounds(true)
+        this.player.angle = 90;
 
         // define keys
         key1 = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ONE)
@@ -55,31 +58,31 @@ class Play extends Phaser.Scene {
         }
 
         // Lane movement
-        if (Phaser.Input.Keyboard.JustDown(key1)) {
+        if (Phaser.Input.Keyboard.JustDown(key1)) { // lane 1
             this.lane1.play(musicConfig)
             this.player.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
-        } else if (Phaser.Input.Keyboard.JustDown(key2)) {
+        } else if (Phaser.Input.Keyboard.JustDown(key2)) { // lane 2
             this.lane2.play(musicConfig)
             this.player.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
-        } else if (Phaser.Input.Keyboard.JustDown(key3)) {
+        } else if (Phaser.Input.Keyboard.JustDown(key3)) { // lane 3
             this.lane3.play(musicConfig)
             this.player.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
-        } else if (Phaser.Input.Keyboard.JustDown(key4)) {
+        } else if (Phaser.Input.Keyboard.JustDown(key4)) { // lane 4
             this.lane4.play(musicConfig)
             this.player.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
-        } else if (Phaser.Input.Keyboard.JustDown(key5)) {
+        } else if (Phaser.Input.Keyboard.JustDown(key5)) { // lane 5
             this.lane5.play(musicConfig)
             this.player.y = (game.config.height / 2)
-        } else if (Phaser.Input.Keyboard.JustDown(key6)) {
+        } else if (Phaser.Input.Keyboard.JustDown(key6)) { // lane 6
             this.lane6.play(musicConfig)
             this.player.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
-        } else if (Phaser.Input.Keyboard.JustDown(key7)) {
+        } else if (Phaser.Input.Keyboard.JustDown(key7)) { // lane 7
             this.lane7.play(musicConfig)
             this.player.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
-        } else if (Phaser.Input.Keyboard.JustDown(key8)) {
+        } else if (Phaser.Input.Keyboard.JustDown(key8)) { // lane 8
             this.lane8.play(musicConfig)
             this.player.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
-        } else if (Phaser.Input.Keyboard.JustDown(key9)) {
+        } else if (Phaser.Input.Keyboard.JustDown(key9)) { // lane 9
             this.lane9.play(musicConfig)
             this.player.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
         }
