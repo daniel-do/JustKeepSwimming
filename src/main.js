@@ -21,6 +21,7 @@ let gameover = false
 let numLanes = 9
 let speed = 200
 let speedMultiplier = 1
+let kelpX = 1200
 let kelpDelay = 2400
 let kelpSpawn = 1
     let kelpCopy = 1

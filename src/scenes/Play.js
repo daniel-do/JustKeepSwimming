@@ -81,7 +81,6 @@ class Play extends Phaser.Scene {
         this.num.create((game.config.width / 30), (game.config.height / 2) + ((game.config.height / numLanes) * 4), 'num9').setScale(1)
 
         // Add kelp to the game world
-        let kelpX = 1200
         this.kelp1 = this.physics.add.sprite(kelpX, (game.config.height / 2) + ((game.config.height / 9) * 1), 'kelp').setScale(1)
         this.kelp2 = this.physics.add.sprite(kelpX, (game.config.height / 2) + ((game.config.height / 9) * 1), 'kelp').setScale(1)
         this.kelp3 = this.physics.add.sprite(kelpX, (game.config.height / 2) + ((game.config.height / 9) * 1), 'kelp').setScale(1)
@@ -190,156 +189,228 @@ class Play extends Phaser.Scene {
         }
         if (kelpPosition == 1) {
             if (kelpCopy == 1) {
-                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
-                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+                if (this.kelp1.x > game.config.width) {
+                    this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
+                    this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+                }
             }
             if (kelpCopy == 2) {
-                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
-                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+                if (this.kelp3.x > game.config.width) {
+                    this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
+                    this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+                }
             }
             if (kelpCopy == 3) {
-                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
-                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+                if (this.kelp5.x > game.config.width) {
+                    this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
+                    this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+                }
             }
             if (kelpCopy == 4) {
-                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
-                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+                if (this.kelp7.x > game.config.width) {
+                    this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
+                    this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+                }
             }
         } else if (kelpPosition == 2) {
             if (kelpCopy == 1) {
-                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
-                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+                if (this.kelp1.x > game.config.width) {
+                    this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
+                    this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+                }
             }
             if (kelpCopy == 2) {
-                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
-                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+                if (this.kelp3.x > game.config.width) {
+                    this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
+                    this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+                }
             }
             if (kelpCopy == 3) {
-                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
-                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+                if (this.kelp5.x > game.config.width) {
+                    this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
+                    this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+                }
             }
             if (kelpCopy == 4) {
-                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
-                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+                if (this.kelp7.x > game.config.width) {
+                    this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
+                    this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+                }
             }
         } else if (kelpPosition == 3) {
             if (kelpCopy == 1) {
-                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
-                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+                if (this.kelp1.x > game.config.width) {
+                    this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
+                    this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+                }
             }
             if (kelpCopy == 2) {
-                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
-                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+                if (this.kelp3.x > game.config.width) {
+                    this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
+                    this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+                }
             }
             if (kelpCopy == 3) {
-                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
-                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+                if (this.kelp5.x > game.config.width) {
+                    this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
+                    this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+                }
             }
             if (kelpCopy == 4) {
-                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
-                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+                if (this.kelp7.x > game.config.width) {
+                    this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
+                    this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+                }
             }
         } else if (kelpPosition == 4) {
             if (kelpCopy == 1) {
-                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
-                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+                if (this.kelp1.x > game.config.width) {
+                    this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
+                    this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+                }
             }
             if (kelpCopy == 2) {
-                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
-                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+                if (this.kelp3.x > game.config.width) {
+                    this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
+                    this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+                }
             }
             if (kelpCopy == 3) {
-                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
-                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+                if (this.kelp5.x > game.config.width) {
+                    this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
+                    this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+                }
             }
             if (kelpCopy == 4) {
-                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
-                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+                if (this.kelp7.x > game.config.width) {
+                    this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
+                    this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+                }
             }
         } else if (kelpPosition == 5) {
             if (kelpCopy == 1) {
-                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
-                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+                if (this.kelp1.x > game.config.width) {
+                    this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
+                    this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+                }
             }
             if (kelpCopy == 2) {
-                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
-                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+                if (this.kelp3.x > game.config.width) {
+                    this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
+                    this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+                }
             }
             if (kelpCopy == 3) {
-                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
-                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+                if (this.kelp5.x > game.config.width) {
+                    this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
+                    this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+                }
             }
             if (kelpCopy == 4) {
-                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
-                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+                if (this.kelp7.x > game.config.width) {
+                    this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
+                    this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+                }
             }
         } else if (kelpPosition == 6) {
             if (kelpCopy == 1) {
-                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
-                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+                if (this.kelp1.x > game.config.width) {
+                    this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
+                    this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+                }
             }
             if (kelpCopy == 2) {
-                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
-                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+                if (this.kelp3.x > game.config.width) {
+                    this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
+                    this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+                }
             }
             if (kelpCopy == 3) {
-                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
-                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+                if (this.kelp5.x > game.config.width) {
+                    this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
+                    this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+                }
             }
             if (kelpCopy == 4) {
-                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
-                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+                if (this.kelp7.x > game.config.width) {
+                    this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
+                    this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+                }
             }
         } else if (kelpPosition == 7) {
             if (kelpCopy == 1) {
-                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
-                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+                if (this.kelp1.x > game.config.width) {
+                    this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
+                    this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+                }
             }
             if (kelpCopy == 2) {
-                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
-                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+                if (this.kelp3.x > game.config.width) {
+                    this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
+                    this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+                }
             }
             if (kelpCopy == 3) {
-                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
-                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+                if (this.kelp5.x > game.config.width) {
+                    this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
+                    this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+                }
             }
             if (kelpCopy == 4) {
-                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
-                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+                if (this.kelp7.x > game.config.width) {
+                    this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
+                    this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+                }
             }
         } else if (kelpPosition == 8) {
             if (kelpCopy == 1) {
-                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
-                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+                if (this.kelp1.x > game.config.width) {
+                    this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
+                    this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+                }
             }
             if (kelpCopy == 2) {
-                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
-                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+                if (this.kelp3.x > game.config.width) {
+                    this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
+                    this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+                }
             }
             if (kelpCopy == 3) {
-                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
-                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+                if (this.kelp5.x > game.config.width) {
+                    this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
+                    this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+                }
             }
             if (kelpCopy == 4) {
-                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
-                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+                if (this.kelp7.x > game.config.width) {
+                    this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
+                    this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+                }
             }
         } else if (kelpPosition == 9) {
             if (kelpCopy == 1) {
-                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
-                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+                if (this.kelp1.x > game.config.width) {
+                    this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
+                    this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+                }
             }
             if (kelpCopy == 2) {
-                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
-                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+                if (this.kelp3.x > game.config.width) {
+                    this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
+                    this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+                }
             }
             if (kelpCopy == 3) {
-                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
-                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+                if (this.kelp5.x > game.config.width) {
+                    this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
+                    this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+                }
             }
             if (kelpCopy == 4) {
-                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
-                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+                if (this.kelp7.x > game.config.width) {
+                    this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
+                    this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+                }
             }
         }
         kelpSpawn++
@@ -387,6 +458,162 @@ class Play extends Phaser.Scene {
         } else if (Phaser.Input.Keyboard.JustDown(key9)) { // lane 9
             this.lane9.play(musicConfig)
             this.goldfish.y = (game.config.height / 2) + ((game.config.height / numLanes) * 4)
+        }
+
+        let kelpPosition = Phaser.Math.Between(1, 9)
+        if (kelpPosition == 1) {
+            if (this.kelp1.x > game.config.width + 100) {
+                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
+                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+            }
+            if (this.kelp3.x > game.config.width + 100) {
+                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
+                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+            }
+            if (this.kelp5.x > game.config.width + 100) {
+                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
+                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+            }
+            if (this.kelp7.x > game.config.width + 100) {
+                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 1)
+                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 9)
+            }
+        } else if (kelpPosition == 2) {
+            if (this.kelp1.x > game.config.width + 100) {
+                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
+                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+            }
+            if (this.kelp3.x > game.config.width + 100) {
+                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
+                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+            }
+            if (this.kelp5.x > game.config.width + 100) {
+                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
+                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+            }
+            if (this.kelp7.x > game.config.width + 100) {
+                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 2)
+                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 8)
+            }
+        } else if (kelpPosition == 3) {
+            if (this.kelp1.x > game.config.width + 100) {
+                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
+                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+            }
+            if (this.kelp3.x > game.config.width + 100) {
+                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
+                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+            }
+            if (this.kelp5.x > game.config.width + 100) {
+                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
+                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+            }
+            if (this.kelp7.x > game.config.width + 100) {
+                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 3)
+                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 7)
+            }
+        } else if (kelpPosition == 4) {
+            if (this.kelp1.x > game.config.width + 100) {
+                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
+                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+            }
+            if (this.kelp3.x > game.config.width + 100) {
+                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
+                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+            }
+            if (this.kelp5.x > game.config.width + 100) {
+                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
+                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+            }
+            if (this.kelp7.x > game.config.width + 100) {
+                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 4)
+                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 6)
+            }
+        } else if (kelpPosition == 5) {
+            if (this.kelp1.x > game.config.width + 100) {
+                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
+                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+            }
+            if (this.kelp3.x > game.config.width + 100) {
+                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
+                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+            }
+            if (this.kelp5.x > game.config.width + 100) {
+                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
+                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+            }
+            if (this.kelp7.x > game.config.width + 100) {
+                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 5)
+                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 5)
+            }
+        } else if (kelpPosition == 6) {
+            if (this.kelp1.x > game.config.width + 100) {
+                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
+                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+            }
+            if (this.kelp3.x > game.config.width + 100) {
+                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
+                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+            }
+            if (this.kelp5.x > game.config.width + 100) {
+                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
+                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+            }
+            if (this.kelp7.x > game.config.width + 100) {
+                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 6)
+                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 4)
+            }
+        } else if (kelpPosition == 7) {
+            if (this.kelp1.x > game.config.width + 100) {
+                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
+                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+            }
+            if (this.kelp3.x > game.config.width + 100) {
+                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
+                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+            }
+            if (this.kelp5.x > game.config.width + 100) {
+                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
+                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+            }
+            if (this.kelp7.x > game.config.width + 100) {
+                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 7)
+                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 3)
+            }
+        } else if (kelpPosition == 8) {
+            if (this.kelp1.x > game.config.width + 100) {
+                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
+                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+            }
+            if (this.kelp3.x > game.config.width + 100) {
+                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
+                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+            }
+            if (this.kelp5.x > game.config.width + 100) {
+                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
+                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+            }
+            if (this.kelp7.x > game.config.width + 100) {
+                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 8)
+                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 2)
+            }
+        } else if (kelpPosition == 9) {
+            if (this.kelp1.x > game.config.width + 100) {
+                this.kelp1.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
+                this.kelp2.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+            }
+            if (this.kelp3.x > game.config.width + 100) {
+                this.kelp3.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
+                this.kelp4.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+            }
+            if (this.kelp5.x > game.config.width + 100) {
+                this.kelp5.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
+                this.kelp6.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+            }
+            if (this.kelp7.x > game.config.width + 100) {
+                this.kelp7.y = (game.config.height / 2) + ((game.config.height / 9) * 9)
+                this.kelp8.y = (game.config.height / 2) - ((game.config.height / 9) * 1)
+            }
         }
 
         let padding = 500
