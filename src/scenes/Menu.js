@@ -4,7 +4,7 @@ class Menu extends Phaser.Scene {
     }
 
     preload() {
-        this.load.audio('underwater', './assets/audio/Underwater.mp3')
+        this.load.audio('underwater', './assets/audio/Underwater.mp3') //finding dory
     }
 
     create() {
