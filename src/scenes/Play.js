@@ -94,6 +94,9 @@ class Play extends Phaser.Scene {
         this.goldfish = this.physics.add.sprite(game.config.width / 8, game.config.height / 2, 'goldfish').setScale(0.7)
         this.goldfish.setCollideWorldBounds(true)
 
+        // Add score text to the game world
+        this.scoreText = this.add.text((game.config.width / 30) * 27, ((game.config.height / 2) - ((game.config.height / numLanes) * 4)) - 30, score, { font: '50px Impact', fill: '#FFFF00', align: 'right' });
+
         this.time.addEvent({
             delay: kelpDelay, // in milliseconds
             callback: this.spawnKelp,
@@ -657,6 +660,8 @@ class Play extends Phaser.Scene {
             this.bubble.play()
             //console.log(speed)
         }
+
+        this.scoreText.setText(score);
 
         // Game over logic
         if (gameover) {

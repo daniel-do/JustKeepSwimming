@@ -22,7 +22,7 @@ class GameOver extends Phaser.Scene {
         this.add.text(game.config.width/2, (game.config.height / 4) - (game.config.height / 8), 'Game Over', menuKeyConfig).setOrigin(0.5)
 
         // show instructions text
-        menuKeyConfig.fontSize = '15px'
+        menuKeyConfig.fontSize = '30px'
         menuKeyConfig.color = '#FFFFFF'
         this.add.text(game.config.width/2, ((game.config.height / 4) * 2) - (game.config.height / 8), 'Score: ' + score, menuKeyConfig).setOrigin(0.5)
 
