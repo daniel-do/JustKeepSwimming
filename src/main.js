@@ -1,3 +1,17 @@
+/*
+Daniel Do
+"Just Keep Swimming"
+~37 hours
+
+Creative tilt justification:
+9 random ways for kelp to spawn
+Learned Arcade Physics: gravity, velocity changes, sprite creations
+Learned how to use Aesprite to make the art for the golfish, kelp, and the underwater tilemap
+Through Aesprite, learned how to properly animate sprites
+Unintentional paralax between the main kelp sprites and the scrolling underwater background
+Made use of only 8 kelp sprites with the use of the wrap() function to mimic endless amount of kelp obstacles
+*/
+
 let config = {
     type: Phaser.AUTO,
     width: 960,
