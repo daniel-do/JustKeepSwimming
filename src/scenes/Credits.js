@@ -22,9 +22,15 @@ class Credits extends Phaser.Scene {
         this.add.text(game.config.width/2, (game.config.height / 4) - (game.config.height / 8), 'Credits', menuKeyConfig).setOrigin(0.5)
 
         // show instructions text
-        menuKeyConfig.fontSize = '15px'
+        menuKeyConfig.align = 'left'
+        menuKeyConfig.fontSize = '30px'
         menuKeyConfig.color = '#FFFFFF'
-        this.add.text(game.config.width/2, ((game.config.height / 4) * 2) - (game.config.height / 8), 'Created by Daniel Do', menuKeyConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, ((game.config.height / 4) * 1.25 + 20) - (game.config.height / 8), 'Created by Daniel Do', menuKeyConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, ((game.config.height / 4) * 1.5 + 20) - (game.config.height / 8), 'Development, Art, Design: Daniel Do', menuKeyConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, ((game.config.height / 4) * 1.75 + 20) - (game.config.height / 8), 'Music: "Finding Dory (2016)"', menuKeyConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, ((game.config.height / 4) * 2 + 20) - (game.config.height / 8), 'Piano SFX: Piano keys a4-d5', menuKeyConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, ((game.config.height / 4) * 2.25 + 20) - (game.config.height / 8), 'Bubble SFX: "SpongeBob SquarePants (1999)"', menuKeyConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, ((game.config.height / 4) * 2.5 + 20) - (game.config.height / 8), 'Crunch SFX: Imposter on YouTube', menuKeyConfig).setOrigin(0.5)
 
         menuKeyConfig.align = 'center'
         menuKeyConfig.color = '#FFD700'
