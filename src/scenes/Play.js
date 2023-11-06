@@ -4,8 +4,11 @@ class Play extends Phaser.Scene {
     }
 
     preload() {
+        // spritesheets
         this.load.spritesheet('goldfish', './assets/images/goldfish_spritesheet.png', { frameWidth: 105, frameHeight: 65, startFrame: 0, endFrame: 2})
         this.load.spritesheet('kelp', './assets/images/kelp_spritesheet.png', { frameWidth: 151, frameHeight: 640, startFrame: 0, endFrame: 2})
+        
+        // sounds
         this.load.audio('lane1', './assets/audio/piano-c4.mp3') //piano keys
         this.load.audio('lane2', './assets/audio/piano-d4.mp3')
         this.load.audio('lane3', './assets/audio/piano-e4.mp3')
@@ -17,6 +20,8 @@ class Play extends Phaser.Scene {
         this.load.audio('lane9', './assets/audio/piano-d5.mp3')
         this.load.audio('bubble', './assets/audio/bubble.mp3') //spongebob squarepants
         this.load.audio('crunch', './assets/audio/crunch.mp3') //https://www.youtube.com/watch?v=VwmT4q1iq0M
+
+        // images
         this.load.image('lane', './assets/images/lane.png')
         this.load.image('num1', './assets/images/num1.png')
         this.load.image('num2', './assets/images/num2.png')
@@ -178,15 +183,12 @@ class Play extends Phaser.Scene {
             this.kelp1.setVelocityX(speed * -1)
             this.kelp2.setVelocityX(speed * -1)
         } else if (kelpSpawn == 2) {
-            // Move kelp towards the right of the screen
             this.kelp3.setVelocityX(speed * -1)
             this.kelp4.setVelocityX(speed * -1)
         } else if (kelpSpawn == 3) {
-            // Move kelp towards the right of the screen
             this.kelp5.setVelocityX(speed * -1)
             this.kelp6.setVelocityX(speed * -1)
         } else if (kelpSpawn == 4) {    
-            // Move kelp towards the right of the screen
             this.kelp7.setVelocityX(speed * -1)
             this.kelp8.setVelocityX(speed * -1)
         }
@@ -651,14 +653,11 @@ class Play extends Phaser.Scene {
             this.kelp8.setVelocityX(speed * -1)
         }
 
-        // Increase speed of kelp with each score increase (DOES NOT WORK)
+        // Increase speed of kelp with each score increase
         if (((this.kelp1.x <= (game.config.width / 8) + 2) && (this.kelp1.x >= (game.config.width / 8) - 2)) || ((this.kelp3.x <= (game.config.width / 8) + 2) && (this.kelp3.x >= (game.config.width / 8) - 2)) || ((this.kelp5.x <= (game.config.width / 8) + 2) && (this.kelp5.x >= (game.config.width / 8) - 2)) || ((this.kelp7.x <= (game.config.width / 8) + 2) && (this.kelp7.x >= (game.config.width / 8) - 2))) {
             score += 1
             speed += 10
-            //speedMultiplier += 1
-            //kelpDelay -= 200 * speedMultiplier
             this.bubble.play()
-            //console.log(speed)
         }
 
         this.scoreText.setText(score);

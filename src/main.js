@@ -34,11 +34,10 @@ let score = 0
 let gameover = false
 let numLanes = 9
 let speed = 200
-let speedMultiplier = 1
 let kelpX = 1200
 let kelpDelay = 2400
 let kelpSpawn = 1
-    let kelpCopy = 1
+let kelpCopy = 1
 
 // reserve keyboard vars
 let keyB, keyC, keySPACE, key1, key2, key3, key4, key5, key6, key7, key8, key9
