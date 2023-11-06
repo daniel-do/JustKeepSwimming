@@ -12,7 +12,7 @@ class Credits extends Phaser.Scene {
             fontFamily: 'Courier',
             fontSize: '80px',
             backgroundColor: '#CC000000',
-            color: '#FF8C00',
+            color: '#DC4D01',
             align: 'center',
             padding:
             {

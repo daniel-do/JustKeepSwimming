@@ -7,7 +7,8 @@ class Play extends Phaser.Scene {
         // spritesheets
         this.load.spritesheet('goldfish', './assets/images/goldfish_spritesheet.png', { frameWidth: 105, frameHeight: 65, startFrame: 0, endFrame: 2})
         this.load.spritesheet('kelp', './assets/images/kelp_spritesheet.png', { frameWidth: 151, frameHeight: 640, startFrame: 0, endFrame: 2})
-        
+        //this.load.spritesheet('kelpFlipped', './assets/images/kelp_spritesheet.png', { frameWidth: 151, frameHeight: 640, startFrame: 0, endFrame: 2})
+
         // sounds
         this.load.audio('lane1', './assets/audio/piano-c4.mp3') //piano keys
         this.load.audio('lane2', './assets/audio/piano-d4.mp3')
@@ -94,6 +95,12 @@ class Play extends Phaser.Scene {
         this.kelp6 = this.physics.add.sprite(kelpX, (game.config.height / 2) + ((game.config.height / 9) * 1), 'kelp').setScale(1)
         this.kelp7 = this.physics.add.sprite(kelpX, (game.config.height / 2) + ((game.config.height / 9) * 1), 'kelp').setScale(1)
         this.kelp8 = this.physics.add.sprite(kelpX, (game.config.height / 2) + ((game.config.height / 9) * 1), 'kelp').setScale(1)
+
+        // Flip all top kelp sprites
+        this.kelp2.flipY = true;
+        this.kelp4.flipY = true;
+        this.kelp6.flipY = true;
+        this.kelp8.flipY = true;
 
         // Add player
         this.goldfish = this.physics.add.sprite(game.config.width / 8, game.config.height / 2, 'goldfish').setScale(0.7)
