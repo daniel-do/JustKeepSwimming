@@ -5,6 +5,7 @@ class Menu extends Phaser.Scene {
 
     preload() {
         this.load.audio('underwater', './assets/audio/Underwater.mp3') //finding dory
+        this.load.image('underwater', './assets/images/underwaterAmbre.png')
     }
 
     create() {
@@ -13,12 +14,15 @@ class Menu extends Phaser.Scene {
         this.underwater.loop = true
         this.underwater.play()
 
+        // place tile sprite
+        this.underwater = this.add.tileSprite(0, 0, 960, 640, 'underwater').setOrigin(0, 0);
+
         let menuKeyConfig = 
         {
             fontFamily: 'Courier',
             fontSize: '80px',
             backgroundColor: '#CC000000',
-            color: '#89CFF0',
+            color: '#5A954A',
             align: 'center',
             padding:
             {

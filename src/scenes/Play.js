@@ -27,7 +27,7 @@ class Play extends Phaser.Scene {
         this.load.image('num7', './assets/images/num7.png')
         this.load.image('num8', './assets/images/num8.png')
         this.load.image('num9', './assets/images/num9.png')
-        this.load.image('underwater', './assets/images/underwater.png')
+        this.load.image('underwaterBubbles', './assets/images/underwaterAmbreBubbles.png')
     }
 
     create() {
@@ -38,7 +38,7 @@ class Play extends Phaser.Scene {
         speed = 200
 
         // place tile sprite
-        this.underwater = this.add.tileSprite(0, 0, 960, 640, 'underwater').setOrigin(0, 0);
+        this.underwater = this.add.tileSprite(0, 0, 960, 640, 'underwaterBubbles').setOrigin(0, 0);
 
         // Import sounds
         this.lane1 = this.sound.add('lane1')

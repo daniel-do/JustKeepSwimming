@@ -4,12 +4,15 @@ class Credits extends Phaser.Scene {
     }
 
     create() {
+        // place tile sprite
+        this.underwater = this.add.tileSprite(0, 0, 960, 640, 'underwater').setOrigin(0, 0);
+
         let menuKeyConfig = 
         {
             fontFamily: 'Courier',
             fontSize: '80px',
             backgroundColor: '#CC000000',
-            color: '#FFA500',
+            color: '#FF8C00',
             align: 'center',
             padding:
             {

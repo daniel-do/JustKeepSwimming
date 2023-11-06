@@ -4,12 +4,15 @@ class GameOver extends Phaser.Scene {
     }
 
     create() {
+        // place tile sprite
+        this.underwater = this.add.tileSprite(0, 0, 960, 640, 'underwater').setOrigin(0, 0);
+
         let menuKeyConfig = 
         {
             fontFamily: 'Courier',
             fontSize: '80px',
             backgroundColor: '#CC000000',
-            color: '#FF7276',
+            color: '#C23B22',
             align: 'center',
             padding:
             {
